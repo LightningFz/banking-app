@@ -1,4 +1,5 @@
 import HeaderBox from '@/components/ui/HeaderBox'
+import TotalBalanceBox from '@/components/ui/TotalBalanceBox'
 import TotalBalance from '@/components/ui/TotalBalanceBox'
 import React from 'react'
 
@@ -15,7 +16,7 @@ const Home = () => {
             user={loggedIn?.firstName || 'Guest'}
             subtext='Access and manage your account and transactions effeiently.'
           />
-          <TotalBalance
+          <TotalBalanceBox
             accounts={[]}
             totalBanks={1}
             totalCurrentBalance={1234.67}
