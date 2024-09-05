@@ -28,7 +28,7 @@ const AuthForm = ({ type }: {type: string}) => {
     const router = useRouter();
     const [user, setUser] = useState(null);
     const [IsLoading, setIsLoading] = useState(false);
-    const loggedInUser = await getLoggedInUser();
+    //const loggedInUser = await getLoggedInUser();
 
     const formSchema = authFormSchema(type);
       // 1. Define your form.
@@ -74,9 +74,9 @@ const AuthForm = ({ type }: {type: string}) => {
                 src="/icons/logo.svg"
                 width={34}
                 height={34}
-                alt="Horizon logo"
+                alt="Surge logo"
                 />
-                <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">Horizon</h1>
+                <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">Surge</h1>
             </Link>
 
             <div className='flex flex-col gap-1 md:gap-3'>

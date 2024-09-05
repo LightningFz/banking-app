@@ -16,13 +16,14 @@ export const signUp = async (userData: SignUpParams) => {
 
     try{
         const { account } = await createAdminClient();
+        const { email, firstName, lastName, password } = userData;
 
         const newUserAccount = await account.create(
             ID.unique(), 
-            userData.email, 
-            userData.password, 
-            '${firstName} {lastName}'
-        );
+            email, 
+            password, 
+            `${firstName} ${lastName}`
+          );
 
         const session = await account.createEmailPasswordSession(userData.email, userData.password);
 
