@@ -22,7 +22,7 @@ export const signUp = async (userData: SignUpParams) => {
             ID.unique(), 
             email, 
             password, 
-            `${firstName} ${lastName}`
+            `${firstName} ${lastName}` 
           );
 
         const session = await account.createEmailPasswordSession(userData.email, userData.password);
@@ -42,7 +42,10 @@ export const signUp = async (userData: SignUpParams) => {
 export async function getLoggedInUser() {
     try {
       const { account } = await createSessionClient();
-      return await account.get();
+      
+      const user = await account.get();
+      return parseStringify(user);
+        
     } catch (error) {
       return null;
     }
