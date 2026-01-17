@@ -1,6 +1,3 @@
-Here's how you can narrate this for your README as if you built "Surge," based on the template you provided:
-
----
 
 # Surge
 
